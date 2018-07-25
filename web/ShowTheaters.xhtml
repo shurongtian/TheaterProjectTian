@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <h:body>
+        
+            <h:form>
+                <h:dataTable 
+                    value="#{theaterBean.showTheaters}" var="theater">
+                <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Theater Name"/>
+                  </f:facet>
+                    <h:outputText value="#{theater.theatername}"/>
+                </h:column>        
+                      <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Theater Name"/>
+                  </f:facet>
+                          <h:outputText value="#{theater.address}"/>
+                </h:column> 
+                      <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Theater Name"/>
+                  </f:facet>
+                          <h:outputText value="#{theater.city}"/>
+                </h:column>  
+                      <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Theater Name"/>
+                  </f:facet>
+                          <h:outputText value="#{theater.states}"/>
+                            <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Theater Name"/>
+                  </f:facet>
+                                <h:outputText value="#{theater.zipcode}"/>
+                </h:column>  
+                </h:column>  
+                    <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Name"/>
+                  </f:facet>
+                  <h:commandLink value="Show" 
+                           action="#{moviesBean.showMovies(theater)}" >
+                      <f:param name="theaterid" value="#{theaterBean.theater.theaterid}"/> 
+	          </h:commandLink>
+                </h:column>
+               
+                </h:dataTable>
+            </h:form>
+        </h:body>
+</html>

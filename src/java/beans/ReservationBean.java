@@ -53,8 +53,8 @@ public class ReservationBean implements Serializable{
         
 reservation.setPurchasetimedate(new SimpleDateFormat("dd/MM/yy HH:mm:ss").format(date));
     theaterEJB.persist(reservation);
-    result= "Transaction Approved"+" for "+numberSeats+" seats"+ ".Current time:"+reservation.getPurchasetimedate()
-            +"\nThank You!"+reservation.getCustomerfname()+" "+reservation.getCustomerlname()+" for your business!";
+    result= "Transaction approved"+" for "+numberSeats+" seats"+ ". Current time: "+reservation.getPurchasetimedate()
+            +"\nThank you"+reservation.getCustomerfname()+" "+reservation.getCustomerlname()+" for your business!";
         
     }
 

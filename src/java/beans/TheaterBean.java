@@ -58,6 +58,7 @@ public class TheaterBean {
     {
         return theaterEJB.findAllTheater();
     }  
+    
     public List<Theater> getShowTheaters() {
         //this.theater = theater;
         return theaterEJB.findAllNearTheater(theater);

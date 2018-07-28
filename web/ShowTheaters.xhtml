@@ -9,12 +9,25 @@ and open the template in the editor.
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
-        <title></title>
+        <title>Select Theater</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <h:body>
+        <style type="text/css">
+            body{
+                background-image: url(movietheater.jpg);
+                background-repeat: no-repeat;
+                background-position: 50% 100px;
+                background-size: auto;
+            }
+        </style>
         
             <h:form>
+                <center>
+                    
+                    <h:outputText style="font-size: 20pt;" value="Please select a theater"/>
+                        
+
                 <h:dataTable 
                     value="#{theaterBean.showTheaters}" var="theater">
                 <h:column>
@@ -25,39 +38,43 @@ and open the template in the editor.
                 </h:column>        
                       <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Address"/>
                   </f:facet>
                           <h:outputText value="#{theater.address}"/>
                 </h:column> 
                       <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="City  "/>
                   </f:facet>
                           <h:outputText value="#{theater.city}"/>
-                </h:column>  
+                          
+                </h:column>
                       <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="State    "/>
                   </f:facet>
                           <h:outputText value="#{theater.states}"/>
+                      </h:column> 
                             <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Zipcode"/>
                   </f:facet>
                                 <h:outputText value="#{theater.zipcode}"/>
-                </h:column>  
+                 
                 </h:column>  
                     <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Name"/>
+                    <!--h:outputText value="Select"/-->
                   </f:facet>
-                  <h:commandLink value="Show" 
+                  <h:commandLink value="Select" 
                            action="#{moviesBean.showMovies(theater)}" >
                       <f:param name="theaterid" value="#{theaterBean.theater.theaterid}"/> 
 	          </h:commandLink>
                 </h:column>
                
                 </h:dataTable>
+
+                </center>
             </h:form>
         </h:body>
 </html>

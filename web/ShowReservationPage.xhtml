@@ -7,7 +7,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
+        <style type="text/css">
+            body{
+                background-image: url(movietheater.jpg);
+                background-repeat: no-repeat;
+                background-position: 50% 100px;
+                background-size: auto;
+            }
+        </style>
+        
         <h:form>
+            <center>
+
+                <h:outputText style="font-size: 20pt;" value="Please make your ticket purchase"/>
+                <br> </br>
+                
         <h:panelGrid columns="2" >
             <h:outputLabel value="Number of Seats: " />
             <h:inputText value="#{reservationBean.numberSeats}" /> 
@@ -27,8 +41,11 @@
               <h:inputText value="#{reservationBean.securityCode}" />
             
               <h:commandButton value="Purchase" action="#{reservationBean.addPurchase()}" />
-            <h:outputText value="#{reservationBean.result}" /> 
+            <h:outputText value="#{reservationBean.result}"/> 
+            
+
         </h:panelGrid>
+            </center>
         </h:form>
     </body>
 </html>

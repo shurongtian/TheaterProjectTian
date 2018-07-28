@@ -9,62 +9,54 @@ and open the template in the editor.
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <head>
-        <title></title>
+        <title>Select movie</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <h:body>
-        movies page
+    <h:body style="background-color:lightyellow;">
+
             <h:form>
                 <h:dataTable 
                     value="#{moviesBean.moviesList}" var="movies">
-
                 <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Poster"/>
+                  </f:facet>
+                    <h:graphicImage width="250px" library="images" name="#{movies.poster}"/> 
+                </h:column>
+                    
+                <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Movie"/>
                   </f:facet>
                     <h:outputText value="#{movies.title}"/>
                 </h:column>
                     <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Description"/>
                   </f:facet>
                         <h:outputText value="#{movies.description}"/>
                 </h:column>
                     <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Genre"/>
                   </f:facet>
                         <h:outputText value="#{movies.genre}"/>
                 </h:column>
                     <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Release Date"/>
                   </f:facet>
                         <h:outputText value="#{movies.releasedate}"/>
                 </h:column>
                     <h:column>
                   <f:facet name="header">
-                    <h:outputText value="Theater Name"/>
+                    <h:outputText value="Duration"/>
                   </f:facet>
                         <h:outputText value="#{movies.runtime}"/>
                 </h:column>
+
                 <h:column>
-                  <f:facet name="header">
-                    <h:outputText value="City"/>
-                  </f:facet>
-                    <h:outputText value="#{movies.runtime}"/>
-                </h:column>
-                    <h:column>
-                  <f:facet name="header">
-                    <h:outputText value="Zipcode"/>
-                  </f:facet>
-                        <h:outputText value="#{movies.genre}"/>
-                </h:column>
-                                    <h:column>
-                  <f:facet name="header">
-                    <h:outputText value="Name"/>
-                  </f:facet>
-                  <h:commandLink value="Show" 
+                  <h:commandLink value="Select" 
                            action="#{moviesBean.showScreenings(movies)}" >
 	          </h:commandLink>
                 </h:column>

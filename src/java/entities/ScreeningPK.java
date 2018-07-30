@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
- * @author Invalidquantum
+ * @author 
  */
 @Embeddable
 public class ScreeningPK implements Serializable {

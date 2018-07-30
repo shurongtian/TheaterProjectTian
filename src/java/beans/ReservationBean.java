@@ -18,7 +18,7 @@ import javax.enterprise.context.SessionScoped;
 
 /**
  *
- * @author Invalidquantum
+ * @author 
  */
 @Named(value = "reservationBean")
 @SessionScoped
@@ -37,10 +37,7 @@ public class ReservationBean implements Serializable{
     private String securityCode;
     private String result;
     
-//    String customerfname;
-//    String customerlname;
-//    String customeremail;
-//    String purchasetimedate;
+
     
     public String showReservationPage(Screening screening){
         this.screening=screening;
@@ -49,21 +46,17 @@ public class ReservationBean implements Serializable{
     
     public String addPurchase(){
         Date date= new Date();
-        //int screenningid=screening.
-//        reservation.getReservationPK().setScreeningid(screening.setScreeningPK();
+
         
 reservation.setPurchasetimedate(new SimpleDateFormat("dd/MM/yy HH:mm:ss").format(date));
     theaterEJB.persist(reservation);
     result= "Transaction approved"+" for "+numberSeats+" seats."+"Your total was $"+numberSeats*10+ ". "+" Current time: "+reservation.getPurchasetimedate()
-            +" Thank you"+reservation.getCustomerfname()+" "+reservation.getCustomerlname()+" for your business!";
+            +" Thank you "+reservation.getCustomerfname()+" "+reservation.getCustomerlname()+" for your business!";
     return "Confirmation";
         
     }
 
-//    public String getResult() {
-//      
-//        //return result;
-//    }
+
     public String getResult(){
         return result;
     }
@@ -101,8 +94,6 @@ reservation.setPurchasetimedate(new SimpleDateFormat("dd/MM/yy HH:mm:ss").format
    }
 
     public void setNumberSeats(int numberSeats) {
-//        if(numberSeats == 0){
-//        throw new IllegalArgumentException("Must be > 0!");}
         this.numberSeats = numberSeats;
     }
     private String cardnumber;

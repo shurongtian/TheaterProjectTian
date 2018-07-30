@@ -60,7 +60,6 @@ public class TheaterBean {
     }  
     
     public List<Theater> getShowTheaters() {
-        //this.theater = theater;
         return theaterEJB.findAllNearTheater(theater);
     }
     
@@ -75,54 +74,6 @@ public class TheaterBean {
         
         return "ShowTheaters";
     }
-
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//          public String showMovies(Theater theater){
-//         FacesContext fc = FacesContext.getCurrentInstance();
-//      Map<String,String> params = 
-//        fc.getExternalContext().getRequestParameterMap();
-//      
-//      int theaterid = Integer.parseInt(params.get("theaterid")); 
-//      theater = theaterEJB.findTheaterById(theaterid);
-//         return "ShowMovies";
-//     }
-//       public String showCloseMovies(Theater t){
-//      FacesContext fc = FacesContext.getCurrentInstance();
-//      Map<String,String> params = 
-//        fc.getExternalContext().getRequestParameterMap();
-//      String theaterId=  params.get("theater_id"); 
-//      for(int i=0;i<50;i++){
-//          System.out.println(theaterId);
-//      }
-////      theater= TheaterEJB.getMyTheater(theaterId);
-//       
-//         return "ShowMovies";
-//     }
-//      public List<Movies> getMovieList()
-//    {
-//  
-//      
-//        return theaterEJB.findAllMovies();
-//    }
-        
- 
 
     
 }

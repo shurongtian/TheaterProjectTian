@@ -7,7 +7,7 @@ package beans;
 
 /**
  *
- * @author Invalidquantum
+ * @author 
  */
 import ejb.TheaterEJB;
 import entities.Movies;
@@ -24,7 +24,7 @@ import javax.faces.context.FacesContext;
 
 /**
  *
- * @author Invalidquantum
+ * @author 
  */
 @Named(value = "moviesBean")
 @SessionScoped

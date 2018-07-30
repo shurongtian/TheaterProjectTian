@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Invalidquantum
+ * @author 
  */
 @Entity
 @Table(name = "THEATERMOVIE")

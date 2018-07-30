@@ -43,7 +43,7 @@ public class TheaterEJB  {
                 .setParameter("movieid", movieid)
                .setParameter("theaterid",theaterid)
                 .getResultList();
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     public Theater findTheaterByZip(String zipcode) {

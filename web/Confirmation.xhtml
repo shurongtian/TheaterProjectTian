@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Confirmation Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body style="background-color:lightyellow;">
+        <style type="text/css">
+            body{
+                background-image: url(movieTime.png);
+                background-repeat: no-repeat;
+                background-position: 50% 500px;
+                background-size: 200px 200px;
+            }
+        </style>
+        
+        <center> 
+        <div>
+            <h:outputText value="#{moviesBean.movie.title}"/>
+            <br> </br>
+            <h:graphicImage width="230px" library="images" name="#{moviesBean.movie.poster}"/>
+            <br> </br>
+            <h:outputText value="#{reservationBean.screening.showtime}"/>
+            <br> </br>
+            <h:outputText value="#{reservationBean.screening.auditorium}"/>
+            <br> </br>
+            <h:outputText style="font-size: 20pt;" value="#{reservationBean.result}" /> 
+<!--            <p> <img src="dog.jpg" alt="The DOG" width="300" height="310" align="right" /> </p>-->
+        </div>
+        </center>
+        
+    </body>
+</html>
